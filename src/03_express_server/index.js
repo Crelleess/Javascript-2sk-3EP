@@ -2,11 +2,11 @@ const express = require('express');
 
 const app = express();
 
+// middle-ware pro staticke soubory
 app.use(express.static('www'));
 
-// custom odpovedi na custom URL v dotazu
-app.get('/hello', (dotaz, odpoved) => odpoved.send('Hello World!'));
-app.get('/json', (dotaz, odpoved) => odpoved.json({ pozdrav: 'Hello World!' }));
+// vlastni middle-ware
+app.use('/api', require('./app/router'));
 
 app.listen(8000, () => {
     console.log('Server běží na http://localhost:8000...');
