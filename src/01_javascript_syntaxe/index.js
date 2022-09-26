@@ -99,7 +99,7 @@ o.predstavSe();
 console.log(o);
 
 // "sipkovy" zapis funkci
-let secti = (a, b) => {return a + b};
+let secti = (a, b) => a + b;
 
 // je totez jako
 /*
