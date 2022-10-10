@@ -1,9 +1,11 @@
+// pouzite balicky
 const express = require('express');
-
-const controller = require('./html_controller');
-
+// vytvoreni routeru
 const router = express.Router();
 
-router.get(['/', '/index'], controller.index);
+// znama URL
+router.get('/error', require('./html_controller').error);
+router.get(['/', '/index'], require('./html_controller').index);
 
+// export vysledku pro import nekde jinde
 module.exports = router;
