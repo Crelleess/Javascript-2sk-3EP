@@ -1,8 +1,8 @@
 
 exports.index = (dotaz, odpoved) => {
-    odpoved.render('index');
+    odpoved.render('page/index');
 };
 
 exports.error = (dotaz, odpoved) => {
-    odpoved.render('error');
+    odpoved.render('page/error');
 };

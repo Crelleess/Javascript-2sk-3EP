@@ -2,9 +2,9 @@
   "name": "03_express_server",
   "version": "1.0.0",
   "description": "Jednoduchý webový server pomocí knihovny Express",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jakub Šenkýř",
