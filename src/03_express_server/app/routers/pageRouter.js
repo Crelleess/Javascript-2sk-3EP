@@ -3,7 +3,7 @@ const express = require('express');
 // vytvoreni routeru
 const router = express.Router();
 
-// znama URL
+// podporovane URL
 router.get('/error', require('../controllers/pageController').error);
 router.get(['/', '/index'], require('../controllers/pageController').index);
 

@@ -8,11 +8,12 @@ app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
 // middle-ware pro staticke soubory
-app.use(express.static('www'));
+app.use(express.static('./www'));
 
-// vlastni middle-ware
+// vlastni middle-ware (demonstrace ruznych API)
 app.use('/api', require('./routers/apiRouter'));
-// middle-ware nahrazujici HTML za dynamicke views
+
+// middle-ware pro obycejne stranky (index, error)
 app.use('/', require('./routers/pageRouter'));
 // vsechny ostatni URL se povazuji za chybu
 app.use('*', (dotaz, odpoved) => odpoved.redirect('/error'));
