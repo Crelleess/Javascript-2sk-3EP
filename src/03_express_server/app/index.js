@@ -1,5 +1,6 @@
 // pouzite balicky
 const express = require('express');
+const session = require('express-session');
 // vytvoreni aplikace
 const app = express();
 
@@ -9,6 +10,14 @@ app.set('views', './app/views');
 
 // middle-ware pro zpracovani prichozich dat z formularu
 app.use(express.urlencoded({ extended: false }));
+
+// middle-ware pro praci se session
+app.use(session({
+    secret: 'To je přísně tajná informace, Karen! Kdo vám to sakra řekl?',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false },
+}));
 
 // middle-ware pro staticke soubory
 app.use(express.static('./www'));

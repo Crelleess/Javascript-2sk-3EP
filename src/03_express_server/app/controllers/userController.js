@@ -42,13 +42,25 @@ exports.signin = (dotaz, odpoved) => {
         return odpoved.redirect('/user/signin');
     }
 
+    dotaz.session.signedInUser = username;
+
     return odpoved.redirect('/user/profile');
 }
 
 exports.signout = (dotaz, odpoved) => {
+    dotaz.session.destroy();
+
     return odpoved.redirect('/user/signin');
 }
 
 exports.profile = (dotaz, odpoved) => {
-    odpoved.render('user/profile');
+    const username = dotaz.session.signedInUser;
+
+    if(!username) {
+        odpoved.redirect('/user/signin');
+    }
+
+    odpoved.render('user/profile', {
+        username,
+    });
 }
