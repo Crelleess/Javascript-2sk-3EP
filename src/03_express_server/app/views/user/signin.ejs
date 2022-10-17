@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přihlášení</title>
-</head>
-<body>
+<%- include('../_layout/header') %>
     <h1>Přihlášení</h1>
     <form method="post" script="/user/signin">
         <input name="username" type="text" placeholder="Jméno..." /><br />
         <input name="password" type="password" placeholder="Heslo..." /><br />
         <input type="submit" value="Přihlásit" />
     </form>
-</body>
-</html>
+<%- include('../_layout/footer') %>

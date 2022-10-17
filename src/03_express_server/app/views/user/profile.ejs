@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-</head>
-<body>
+<%- include('../_layout/header') %>
     <h1>Profil</h1>
     <p>Vítejte na svém profilu, <b><%= username %>!</b></p>
     <a href="/user/signout">Odhlásit se</a>
-</body>
-</html>
+<%- include('../_layout/footer') %>

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrace</title>
-</head>
-<body>
+<%- include('../_layout/header') %>
     <h1>Registrace</h1>
     <form method="post" script="/user/signup">
         <input name="username" type="text" placeholder="Jméno..." /><br />
@@ -13,5 +6,4 @@
         <input name="passwordCheck" type="password" placeholder="Heslo pro kontrolu..." /><br />
         <input type="submit" value="Registrovat" />
     </form>
-</body>
-</html>
+<%- include('../_layout/footer') %>

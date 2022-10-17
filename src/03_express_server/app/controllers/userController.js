@@ -1,11 +1,15 @@
 const model = require('../models/userModel');
 
 exports.signupForm = (request, response) => {
-    response.render('user/signup');
+    response.render('user/signup', {
+        title: 'Registrace',
+    });
 }
 
 exports.signinForm = (request, response) => {
-    response.render('user/signin');
+    response.render('user/signin', {
+        title: 'Přihlášení',
+    });
 }
 
 exports.signup = (request, response) => {
@@ -61,6 +65,7 @@ exports.profile = (request, response) => {
     }
 
     response.render('user/profile', {
+        title: 'Profil',
         username,
     });
 }
