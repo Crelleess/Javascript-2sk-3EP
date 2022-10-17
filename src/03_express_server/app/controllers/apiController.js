@@ -1,11 +1,11 @@
 
-exports.hello = (dotaz, odpoved) => {
-    odpoved.send('Hello World!');
+exports.hello = (request, response) => {
+    response.send('Hello World!');
 };
 
-exports.json = (dotaz, odpoved) => {
-    odpoved.json({
-        pozdrav: 'Hello World!'
+exports.json = (request, response) => {
+    response.json({
+        greetings: 'Hello World!'
     });
 };
 

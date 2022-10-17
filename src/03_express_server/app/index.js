@@ -26,11 +26,11 @@ app.use(express.static('./www'));
 app.use('/api', require('./routers/apiRouter'));
 
 // middle-ware pro praci s uzivateli
-app.use(['/uzivatel', '/user'], require('./routers/userRouter'));
+app.use('/user', require('./routers/userRouter'));
 // middle-ware pro obycejne stranky (index, error)
 app.use('/', require('./routers/pageRouter'));
 // vsechny ostatni URL se povazuji za chybu
-app.use('*', (dotaz, odpoved) => odpoved.redirect('/error'));
+app.use('*', (request, response) => response.redirect('/error'));
 
 // export aplikace ze sobuoru pro dalsi pouziti
 module.exports = app;

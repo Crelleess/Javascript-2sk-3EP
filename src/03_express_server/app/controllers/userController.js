@@ -1,66 +1,66 @@
 const model = require('../models/userModel');
 
-exports.signupForm = (dotaz, odpoved) => {
-    odpoved.render('user/signup');
+exports.signupForm = (request, response) => {
+    response.render('user/signup');
 }
 
-exports.signinForm = (dotaz, odpoved) => {
-    odpoved.render('user/signin');
+exports.signinForm = (request, response) => {
+    response.render('user/signin');
 }
 
-exports.signup = (dotaz, odpoved) => {
+exports.signup = (request, response) => {
     // vytahani si dat z formulare do promennych
-    const username = dotaz.body.username;
-    const password = dotaz.body.password;
-    const passwordCheck = dotaz.body.passwordCheck;
+    const username = request.body.username;
+    const password = request.body.password;
+    const passwordCheck = request.body.passwordCheck;
 
     // kontroly vstupnich dat
     if(username.trim().length == 0) {
-        return odpoved.redirect('/user/signup');
+        return response.redirect('/user/signup');
     }
     if(password.trim().length == 0) {
-        return odpoved.redirect('/user/signup');
+        return response.redirect('/user/signup');
     }
     if(password != passwordCheck) {
-        return odpoved.redirect('/user/signup');
+        return response.redirect('/user/signup');
     }
 
     // prace modelu
     if(!model.addUser(username, password)) {
-        return odpoved.redirect('/page/error');
+        return response.redirect('/page/error');
     }
 
     // vysledny view pri uspesne registraci
-    return odpoved.redirect('/user/signin');
+    return response.redirect('/user/signin');
 }
 
-exports.signin = (dotaz, odpoved) => {
-    const username = dotaz.body.username.trim();
-    const password = dotaz.body.password.trim();
+exports.signin = (request, response) => {
+    const username = request.body.username.trim();
+    const password = request.body.password.trim();
 
     if(!model.check(username, password)) {
-        return odpoved.redirect('/user/signin');
+        return response.redirect('/user/signin');
     }
 
-    dotaz.session.signedInUser = username;
+    request.session.signedInUser = username;
 
-    return odpoved.redirect('/user/profile');
+    return response.redirect('/user/profile');
 }
 
-exports.signout = (dotaz, odpoved) => {
-    dotaz.session.destroy();
+exports.signout = (request, response) => {
+    request.session.destroy();
 
-    return odpoved.redirect('/user/signin');
+    return response.redirect('/user/signin');
 }
 
-exports.profile = (dotaz, odpoved) => {
-    const username = dotaz.session.signedInUser;
+exports.profile = (request, response) => {
+    const username = request.session.signedInUser;
 
     if(!username) {
-        odpoved.redirect('/user/signin');
+        response.redirect('/user/signin');
     }
 
-    odpoved.render('user/profile', {
+    response.render('user/profile', {
         username,
     });
 }
