@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // middle-ware pro praci se session
 app.use(session({
-    secret: 'To je přísně tajná informace, Karen! Kdo vám to sakra řekl?',
+    secret: require('../conf').secret,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
