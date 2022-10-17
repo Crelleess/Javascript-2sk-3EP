@@ -61,7 +61,7 @@ exports.profile = (request, response) => {
     const username = request.session.signedInUser;
 
     if(!username) {
-        response.redirect('/user/signin');
+        return response.redirect('/user/signin');
     }
 
     response.render('user/profile', {
