@@ -68,4 +68,4 @@ exports.profile = (request, response) => {
         title: 'Profil',
         username,
     });
-}
+} 

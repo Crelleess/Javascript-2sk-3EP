@@ -4,5 +4,8 @@
     },
     "snj": {
         "password": "$2a$10$wBBr3krj3Q01FVMtcb/kAeyHAcx4HZ5BSKJJhnESu4l9Zm3x9sh1a"
+    },
+    "rosulek": {
+        "password": "$2a$10$lmSrvoIKeIQwhTmrq8DB6ewAMIgZSeEtOsRfdQ/XYRxIZaZdwXF.K"
     }
 }
