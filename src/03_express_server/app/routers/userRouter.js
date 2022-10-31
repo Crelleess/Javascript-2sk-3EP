@@ -9,5 +9,6 @@ router.get('/signin', controller.signinForm);
 router.post('/signin', controller.signin);
 router.get('/signout', controller.signout);
 router.get('/profile', controller.profile);
+router.get('/fun', controller.fun);
 
 module.exports = router;

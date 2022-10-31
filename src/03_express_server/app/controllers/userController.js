@@ -69,3 +69,16 @@ exports.profile = (request, response) => {
         username,
     });
 } 
+
+exports.fun = (request, response) => {
+    const username = request.session.signedInUser;
+
+    if(!username) {
+        return response.redirect('/user/signin');
+    }
+
+    response.render('user/fun', {
+        title: 'Zábava',
+        username,
+    });
+} 
