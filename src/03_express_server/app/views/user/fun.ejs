@@ -1,42 +1,43 @@
 <%- include('../_layout/header') %>
-    <html>
-        <head>
-            <link rel="stylesheet" href="style/fun.css"> 
-        </head>
-        <body>
-            <h1>Zábava</h1>
-            <p>Vítej v zábavném koutečku, <b><%= username %>!</b></p>
-            <h2>Kalkulačka 3000</h2>
-            <div class="container">
-                <div class="Kalkulacka">
-                    <div id="input" class="">
-                    </div>
-                    <div id='buttons-container'>
-                        <div class="btn btn-operator " onclick="clearInput()">C</div>
-                        <div class="btn btn-operator " onclick="eraseNum()">⌦</div>
-                        <div class="btn btn-operator " onclick="insertNum('/')">/</div>
-                        <div class="btn btn-operator " onclick="insertNum('*')">x</div>
+<!DOCTYPE html>    
+<html lang="cs">
+    <head>
+        <link rel="stylesheet" href="/css/zabava.css"> 
+    </head>
+    <body>
+        <h1>Zábava</h1>
+        <p>Vítej v zábavném koutečku, <b><%= username %>!</b></p>
+        <h2 style="text-align: center;">Kalkulačka 3000</h2>
+        <div class="container">
+            <div class="Kalkulacka">
+                <div id="input" class="">
+                </div>
+                <div id='buttons-container'>
+                    <div class="btn btn-operace " onclick="clearInput()">C</div>
+                    <div class="btn btn-operace " onclick="erasecislo()">⌦</div>
+                    <div class="btn btn-operace " onclick="insertcislo('/')">/</div>
+                    <div class="btn btn-operace " onclick="insertcislo('*')">x</div>
 
-                        <div class="btn btn-num" onclick="insertNum(7)">7</div>
-                        <div class="btn btn-num" onclick="insertNum(8)">8</div>
-                        <div class="btn btn-num" onclick="insertNum(9)">9</div>
-                        <div class="btn btn-operator " onclick="insertNum('-')">-</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(7)">7</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(8)">8</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(9)">9</div>
+                    <div class="btn btn-operace " onclick="insertcislo('-')">-</div>
 
-                        <div class="btn btn-num" onclick="insertNum(4)">4</div>
-                        <div class="btn btn-num" onclick="insertNum(5)">5</div>
-                        <div class="btn btn-num" onclick="insertNum(6)">6</div>
-                        <div class="btn btn-operator " onclick="insertNum('+')">+</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(4)">4</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(5)">5</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(6)">6</div>
+                    <div class="btn btn-operace " onclick="insertcislo('+')">+</div>
 
-                        <div class="btn btn-num" onclick="insertNum(1)">1</div>
-                        <div class="btn btn-num" onclick="insertNum(2)">2</div>
-                        <div class="btn btn-num" onclick="insertNum(3)">3</div>
-                        <div class="btn btn-operator equal " onclick="equalTo()">=</div>
-                        <div class="btn btn-num dot" onclick="insertNum(0)">0</div>
-                        <div class="btn btn-num" onclick="insertNum('.')">.</div>
-                    </div>
+                    <div class="btn btn-cislo" onclick="insertcislo(1)">1</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(2)">2</div>
+                    <div class="btn btn-cislo" onclick="insertcislo(3)">3</div>
+                    <div class="btn btn-operace equal " onclick="equalTo()">=</div>
+                    <div class="btn btn-cislo dot" onclick="insertcislo(0)">0</div>
+                    <div class="btn btn-cislo" onclick="insertcislo('.')">.</div>
                 </div>
             </div>
-        <script src="/style/fun.js"></script>
-        </body>
-    </html>
+        </div>
+    <script src="/css/zabava.js"></script>
+    </body>
+</html>
 <%- include('../_layout/footer') %>
