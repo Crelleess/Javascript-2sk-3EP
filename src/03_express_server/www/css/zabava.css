@@ -20,7 +20,8 @@
 	justify-content: center;
 	align-items: center;
 	border-style: solid;
-	background-color: black;
+	background-color: orangered;
+	margin-left: 37%;
 }
 
 #input {
@@ -29,11 +30,11 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	color: #FDFEFE;
+	color: black;
 	padding-right: 10px;
 	font-size: 3em;
 	text-align: right;
-	background-color: #223850;
+	background-color: #8ecccc;
 	transition: all 0.3s ease-in;
 	margin-top: 0.5em;
 }
@@ -65,12 +66,12 @@
 }
 
 .btn-cislo {
-	background-color: #223850;
-	color: #6885A7;
+	background-color: #50717b;
+	color: white;
 }
 
 .btn-cislo:hover {
-	background-color: #233B55;
+	background-color: rgb(41, 73, 107);
 }
 
 .btn-operace {
@@ -84,5 +85,5 @@
 }
 
 .equal{
-	background-color: #e77c18;
+	background-color: #50717b;
 }
