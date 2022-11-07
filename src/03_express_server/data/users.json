@@ -7,5 +7,8 @@
     },
     "rosulek": {
         "password": "$2a$10$lmSrvoIKeIQwhTmrq8DB6ewAMIgZSeEtOsRfdQ/XYRxIZaZdwXF.K"
+    },
+    "alex": {
+        "password": "$2a$10$m1HQxVxImOGgmpFuyoPHVuFiXvq5VDkUQnuiwoKpl.50mcDvbVrG2"
     }
 }
