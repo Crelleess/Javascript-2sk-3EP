@@ -26,10 +26,7 @@
 	transform: rotateX(180deg);
   }
   
-  #navigace:hover {
-	justify-content: center;
-	margin-top: 53px;
-  }
+  
   
   .navbar {
 	position: sticky;
