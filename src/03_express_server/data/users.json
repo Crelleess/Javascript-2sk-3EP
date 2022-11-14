@@ -13,5 +13,8 @@
     },
     "Alex": {
         "password": "$2a$10$dgfnG5tpEnkAEqXI1uGyd..xfPUuSUKXJVoBXxmmWBQPaw0UqMWHy"
+    },
+    "dan": {
+        "password": "$2a$10$m/gvrWLb.8HmSwzxC33PYOz.Zkm29bGRFbYdV6xNT4sx9HDIrlckq"
     }
 }
