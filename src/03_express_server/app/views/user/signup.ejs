@@ -1,9 +1,21 @@
 <%- include('../_layout/header') %>
-    <h1>Registrace</h1>
-    <form method="post" script="/user/signup">
-        <input name="username" type="text" placeholder="Jméno..." /><br />
-        <input name="password" type="password" placeholder="Heslo..." /><br />
-        <input name="passwordCheck" type="password" placeholder="Heslo pro kontrolu..." /><br />
-        <input type="submit" value="Registrovat" />
-    </form>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <main>
+        <h1>Registrace</h1>
+        <form method="post" script="/user/signup">
+            <input name="username" type="text" placeholder="Jméno..." /><br />
+            <input name="password" type="password" placeholder="Heslo..." /><br />
+            <input name="passwordCheck" type="password" placeholder="Heslo pro kontrolu..." /><br />
+            <input type="submit" value="Registrovat" />
+        </form> 
+    </main>
+</body>
 <%- include('../_layout/footer') %>
